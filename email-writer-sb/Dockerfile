@@ -1,5 +1,5 @@
-# Use official OpenJDK image
-FROM openjdk:17-jdk-slim
+# Use official Java 17 image
+FROM eclipse-temurin:17-jdk
 
 # Set working directory
 WORKDIR /app
@@ -10,5 +10,5 @@ COPY target/*.jar app.jar
 # Expose port
 EXPOSE 8080
 
-# Run app
-ENTRYPOINT ["java", "-jar", "app.jar"]
+# Run application
+ENTRYPOINT ["java","-jar","app.jar"]
