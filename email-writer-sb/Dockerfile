@@ -7,8 +7,8 @@ WORKDIR /app
 # Copy jar file
 COPY target/*.jar app.jar
 
-# Expose port
+# Expose Render dynamic port
 EXPOSE 8080
 
-# Run application
+# Run Spring Boot app
 ENTRYPOINT ["java","-jar","app.jar"]
